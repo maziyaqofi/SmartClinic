@@ -18,9 +18,9 @@
             <Cursor fx:constant="NONE" />
          </cursor></TextField>
 
-        <PasswordField fx:id="passwordField" layoutX="180.0" layoutY="220.0" prefWidth="240.0" promptText="Password" />
+        <PasswordField fx:id="passwordField" layoutX="180.0" layoutY="220.0" onAction="#handleLogin" prefWidth="240.0" promptText="Password" />
 
-        <Button layoutX="250.0" layoutY="290.0" onAction="#handleLogin" prefWidth="100.0" text="Login" />
+        <Button defaultButton="true" layoutX="250.0" layoutY="290.0" onAction="#handleLogin" prefWidth="100.0" text="Login" />
 
         <Label fx:id="messageLabel" layoutX="210.0" layoutY="340.0" style="-fx-text-fill: red;" text="" />
 
