@@ -41,15 +41,15 @@ SmartClinic/
 
 ### Dashboard
 
-![SmartClinic Dashboard](screenshots/dashboard.png)
+![SmartClinic Dashboard](docs/dashboard.png)
 
 ### Patient Management
 
-![Patient Management](screenshots/pasien.png)
+![Patient Management](docs/pasien.png)
 
 ### Patient Form
 
-![Patient Form](screenshots/form-pasien.png)
+![Patient Form](docs/form-pasien.png)
 
 ## Requirements
 
