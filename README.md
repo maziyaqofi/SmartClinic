@@ -45,11 +45,11 @@ SmartClinic/
 
 ### Patient Management
 
-![Patient Management](docs/pasien.png)
+![Patient Management](docs/management-pasien.png)
 
 ### Patient Form
 
-![Patient Form](docs/form-pasien.png)
+![Patient Form](docs/patientform.png)
 
 ## Requirements
 
