@@ -1,70 +1,98 @@
-# SmartClinic
-SmartClinic is a desktop-based clinic management system built using JavaFX, FXML, and MySQL.  
-This project is developed for academic purposes and collaborative team development.
+# SmartClinic – Clinic Management System
+
+SmartClinic is a desktop-based clinic management application developed using Java and JavaFX, with MySQL as its relational database.
+
+The application is designed to support basic clinic operations through a graphical user interface, including patient data management and clinic administration.
 
 ## Features
-- Login Authentication
-- Dashboard Admin
-- Patient Management
-- Doctor Management
-- Medicine Management
-- Medical Records
-- Appointment Management
-- JavaFX Desktop UI
-- MySQL Database Integration
 
-## Technologies Used
-- Java JDK 25
-- JavaFX 26
-- FXML
-- Scene Builder
-- MySQL
-- XAMPP
-- VS Code
-- Git & GitHub
+- Dashboard interface
+- Patient management
+- Patient registration data layer
+- Database integration using MySQL
+- JavaFX-based desktop interface
 
-## 📁 Project Structure
-SmartClinic
-│
-├── src
-│   ├── controller
-│   ├── model
-│   ├── database
-│   └── view
-│
-├── assets
-├── .gitignore
-└── README.md
+*Note: Features are documented according to the currently implemented version.*
 
-## ▶️ How to Run
+## Technology Stack
 
-### 1. Clone Repository
+| Technology | Purpose |
+|---|---|
+| Java 25 | Programming language |
+| JavaFX 26 | Desktop UI framework |
+| MySQL | Relational database |
+| JDBC | Database connectivity |
+| MySQL Connector/J | MySQL driver |
+
+## Project Structure
+
+```text
+SmartClinic/
+├── src/
+├── lib/
+├── screenshots/
+├── smartClinic.sql
+├── run_app.sh
+├── README.md
+└── .gitignore
+```
+
+## Application Screenshots
+
+### Dashboard
+
+![SmartClinic Dashboard](screenshots/dashboard.png)
+
+### Patient Management
+
+![Patient Management](screenshots/pasien.png)
+
+### Patient Form
+
+![Patient Form](screenshots/form-pasien.png)
+
+## Requirements
+
+- JDK 25 or compatible version
+- JavaFX SDK 26
+- MySQL Server
+- MySQL Connector/J 9.6.0
+
+## Installation and Setup
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/maziyaqofi/SmartClinic.git
+cd SmartClinic
 ```
 
-### 2. Open Project
-Open using VS Code.
-
-### 3. Configure JavaFX SDK
-Set JavaFX module path:
+2. Create the database and import the SQL file:
 
 ```bash
-/Users/macbookpro2019/Documents/javaproject/java/javafx-sdk-26.0.1/lib
+mysql -u root -p < smartClinic.sql
 ```
 
-### 4. Run Application
+3. Configure the database connection in `DBConnection.java` according to your local MySQL setup.
 
-Press:
-runing n debuging klik
-or use Run Debug in VS Code.
+4. Run the application:
 
-## 👥 Team Members
+```bash
+chmod +x run_app.sh
+./run_app.sh
+```
 
-- Maziya Ats Tsaqofi
-- Team Member 2
-- Team Member 3
+## Development Notes
 
-## 📌 Notes
-This project is currently under development.
+This repository contains the latest maintained version of the SmartClinic project. Some modules from earlier development iterations may not be included in the current implementation.
+
+## Author
+
+Maziya Qofi
+Naf'an Nur'Alim (Team Member)
+
+GitHub: [@maziyaqofi](https://github.com/maziyaqofi)
+
+---
+
+*Developed as a Java desktop application project.*

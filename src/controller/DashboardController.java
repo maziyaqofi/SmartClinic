@@ -1,52 +1,83 @@
 package controller;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+// import javafx.fxml.FXMLLoader;
+// import javafx.scene.Parent;
+// import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+// import javafx.stage.Stage;
+// import javafx.animation.TranslateTransition;
+// import javafx.util.Duration;
+import util.SceneUtil;
 
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import model.Patient;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class DashboardController implements Initializable {
+public class DashboardController {
+    @FXML
+    private VBox sidebar;
+    @FXML
+    private Label logoTitle;
+    @FXML
+    private Button btnDashboard,btnPasien,btnDokter,btnPetugas,btnObat;
+    private boolean collapsed = false;
+    @FXML
+    private Label lblMaster, lblTransaksi, lblLaporan;
+    @FXML
+    private Button btnPendaftaran,btnPemeriksaan,btnRekam,btnPrediksi;
 
     @FXML
-    private TableView<Patient> patientTable;
+    private void toggleSidebar(){
 
-    @FXML
-    private TableColumn<Patient, Integer> colId;
+        if(!collapsed){
+            sidebar.setPrefWidth(80);
+            logoTitle.setVisible(false);
+            lblMaster.setVisible(false);
+            lblTransaksi.setVisible(false);
+            lblLaporan.setVisible(false);
+            btnDashboard.setText("🏠");
+            btnPasien.setText("👨");
+            btnDokter.setText("🩺");
+            btnPetugas.setText("👩");
+            btnObat.setText("💊");
+            btnPendaftaran.setText("📝");
+            btnPemeriksaan.setText("🩻");
+            btnRekam.setText("📋");
+            btnPrediksi.setText("🧠");
+            collapsed = true;
+        }else{
+            sidebar.setPrefWidth(240);
+            logoTitle.setVisible(true);
+            lblMaster.setVisible(true);
+            lblTransaksi.setVisible(true);
+            lblLaporan.setVisible(true);
+            logoTitle.setText("SMART CLINIC");
+            btnDashboard.setText("🏠 Dashboard");
+            btnPasien.setText("👨‍⚕ Pasien");
+            btnDokter.setText("🩺 Dokter");
+            btnPetugas.setText("👩‍💼 Petugas");
+            btnObat.setText("💊 Obat");
+            btnPendaftaran.setText("📝 Pendaftaran");
+            btnPemeriksaan.setText("🩻 Pemeriksaan");
+            btnRekam.setText("📋 Rekam Medis");
+            btnPrediksi.setText("🧠 Prediksi ML");
 
-    @FXML
-    private TableColumn<Patient, String> colName;
-
-    @FXML
-    private TableColumn<Patient, Integer> colAge;
-
-    @FXML
-    private TableColumn<Patient, String> colGender;
-
-    ObservableList<Patient> patientList = FXCollections.observableArrayList();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colAge.setCellValueFactory(new PropertyValueFactory<>("age"));
-        colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
-
-        patientList.add(new Patient(1, "Ahmad", 22, "Male"));
-        patientList.add(new Patient(2, "Siti", 20, "Female"));
-        patientList.add(new Patient(3, "Budi", 25, "Male"));
-
-        patientTable.setItems(patientList);
+            collapsed = false;
+        }
     }
+    @FXML
+    private void openPasien() {
+        SceneUtil.openMaximizedWindow("/view/pasien.fxml","Data Pasien");
+    }
+    @FXML
+    private void openDokter() {
+        //SceneUtil.openMaximizedWindow("/view/dokter.fxml","Data Dokter");
+    }
+    @FXML
+    private void openPendaftaran() {
+        //SceneUtil.openMaximizedWindow("/view/pendaftaran.fxml","Pendaftaran");
+    }
+      @FXML
+    private void openPemeriksaan() {
+        //SceneUtil.openMaximizedWindow("/view/pemeriksaan.fxml","pemeriksaan");
+    }  
 }

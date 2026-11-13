@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Java compiled files
+*.class
+out/
+
+# IDE
+.idea/
+.vscode/
+
+# JavaFX SDK
+javafx-sdk-*/
+
+# Logs
+*.log
+
+# Local JavaFX SDK
+/javafx-sdk-26.0.1
