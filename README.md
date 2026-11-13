@@ -45,7 +45,7 @@ SmartClinic/
 
 ### Patient Management
 
-![Patient Management](docs/management-pasien.png)
+![Patient Management](docs/management-patient.png)
 
 ### Patient Form
 
